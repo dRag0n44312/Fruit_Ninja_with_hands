@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-161440970-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-161440970-1");
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="A simple HTML5 Template" />
+    <meta name="author" content="dron" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="images/index.css" />
+    <title>Fruit Ninja</title>
+    <!--[if lt IE 9
+      ]><script>
+        document.createElement("canvas");
+      </script><!
+    [endif]-->
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+      }
+
+      #defaultCanvas0 {
+        z-index: 99;
+        opacity: 0.5;
+        position: relative;
+        top: -40px;
+      }
+
+      #control-panel {
+        position: fixed;
+        top: 0;
+        padding: 1rem;
+        background: #efefee;
+      }
+
+      #description {
+        position: fixed;
+        bottom: 0;
+        padding: 1rem;
+        background: #efefee;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="control-panel">
+      <button id="sound-btn">Mute</button>
+      <button id="webcam-btn">Show Webcam</button>
+      <button id="skeleton-btn">Show Skeleton</button>
+    </div>
+    <div id="description">
+      <h1>Guidelines</h1>
+      <div>1. Enable Webcam</div>
+      <div>2. Good Lighting</div>
+      <div>3. Plenty of Space to move Around</div>
+      <div>4. One person at a time</div>
+      <div>5. Slice Fruit with your Wrist</div>
+      <div>
+        5. Avoid slapping others around you and pretending it's an accident
+      </div>
+    </div>
+    <div id="extra">
+      <canvas id="canvas" class="border canvasbox"></canvas>
+    </div>
+    <div id="desc">
+      <div id="browser"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="scripts/all.js"></script>
+  </body>
+</html>
